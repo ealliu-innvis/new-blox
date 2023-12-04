@@ -1,3 +1,3 @@
-module github.com/wowchemy/wowchemy-block-starter
+module github.com/ealliu-innvis/my-hugo-blocks
 
 go 1.19
