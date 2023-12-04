@@ -17,11 +17,14 @@
     <h2>{{$title}}</h2>
     <div>
         <p>{{$text}}</p>
-        <p>{{ .Params.authors }}</p>
+        {{ with .Params.video_embed_source }}
+            <p>{{ .Params.authors }}</p>
+        {{ end }}
     </div>
 
     <div>
-        <iframe width="420" height="315" src="https://www.youtube.com/embed/{{ .Params.video_embed_source }}">
-        </iframe>
+        {{ with .Params.video_embed_source }}
+        <iframe width="420" height="315" src="https://www.youtube.com/embed/{{ . }}"></iframe>
+        {{ end }}
     </div>
 </div>
